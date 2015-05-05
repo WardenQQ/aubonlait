@@ -19,6 +19,8 @@ public:
     explicit StatsWidget(QWidget *parent = 0);
     ~StatsWidget();
     void consommationsParTypes(QCustomPlot *customPlot);
+    void consommationsParRevenu(QCustomPlot *customPlot);
+
 
 private:
     Ui::StatsWidget *ui;
