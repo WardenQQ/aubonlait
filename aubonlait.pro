@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,12 +17,17 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     surveywizard.cpp \
     slavespinbox.cpp \
-    slaveslider.cpp
+    slaveslider.cpp \
+    statswidget.cpp \
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     surveywizard.h \
     slavespinbox.h \
-    slaveslider.h
+    slaveslider.h \
+    statswidget.h \
+    qcustomplot.h
 
 FORMS    += mainwindow.ui \
-    surveywizard.ui
+    surveywizard.ui \
+    statswidget.ui

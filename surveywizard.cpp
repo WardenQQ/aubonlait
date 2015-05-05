@@ -4,11 +4,14 @@
 #include "slaveslider.h"
 #include "slavespinbox.h"
 
+#include <QSqlQuery>
+
 SurveyWizard::SurveyWizard(QWidget *parent) :
     QWizard(parent),
     ui(new Ui::SurveyWizard)
 {
     ui->setupUi(this);
+    this->setWindowFlags(Qt::Widget);
 
     this->setButtonText(QWizard::BackButton, QString("Précédent"));
     this->setButtonText(QWizard::NextButton, QString("Suivant"));
@@ -19,16 +22,13 @@ SurveyWizard::SurveyWizard(QWidget *parent) :
     connect(this->findChild<QRadioButton *>(QString("radioButtonSexeHomme")), &QRadioButton::toggled, this, &SurveyWizard::changeNamesToMale);
     connect(this->findChild<QRadioButton *>(QString("radioButtonSexeFemme")), &QRadioButton::toggled, this, &SurveyWizard::changeNamesToFemale);
 
-    connect(this->findChild<QCheckBox *>(QString("aubonlaitCheck")), &QCheckBox::toggled, this, &SurveyWizard::activateAubonlait);
-    connect(this->findChild<QCheckBox *>(QString("danoneCheck")), &QCheckBox::toggled, this, &SurveyWizard::activateDanone);
-    connect(this->findChild<QCheckBox *>(QString("yoplaitCheck")), &QCheckBox::toggled, this, &SurveyWizard::activateYoplait);
-    connect(this->findChild<QCheckBox *>(QString("lactelCheck")), &QCheckBox::toggled, this, &SurveyWizard::activateLactel);
+    connect(this, &SurveyWizard::accepted, this, &SurveyWizard::saveSurvey);
 
 
     for (int i = 1; i <= 8; i++) {
-        QSlider * master = this->page(3)->findChild<QSlider *>(QString("master_%0").arg(i));
-        SlaveSlider * slaveSlider = this->page(4)->findChild<SlaveSlider *>(QString("slaveSlider_%0").arg(i));
-        SlaveSpinBox * slaveSpin = this->page(4)->findChild<SlaveSpinBox *>(QString("slaveSpinBox_%0").arg(i));
+        QSlider * master = this->findChild<QSlider *>(QString("master_%0").arg(i));
+        SlaveSlider * slaveSlider = this->findChild<SlaveSlider *>(QString("slaveSlider_%0").arg(i));
+        SlaveSpinBox * slaveSpin = this->findChild<SlaveSpinBox *>(QString("slaveSpinBox_%0").arg(i));
         connect(master, &QSlider::valueChanged, slaveSlider, &SlaveSlider::changeMax);
         connect(master, &QSlider::valueChanged, slaveSpin, &SlaveSpinBox::changeMax);
     }
@@ -86,4 +86,34 @@ void SurveyWizard::activateLactel(bool activate)
     for (auto ite = list.begin(); ite != list.end(); ite++) {
         (*ite)->setEnabled(activate);
     }
+}
+
+void SurveyWizard::saveSurvey()
+{
+    QSqlQuery q;
+    q.prepare("INSERT INTO sonde (sexe, age, etat_civil, revenu, nb_adultes, nb_enfants, nb_animaux) "
+              " VALUES (:sexe, :age, :etat_civil, :revenu, :nb_adultes, :nb_enfants, :nb_animaux)");
+    q.bindValue(":sexe", this->findChild<QButtonGroup *>(QString("sexGroup"))->checkedId() * (-1) -2 );
+    q.bindValue(":age", this->findChild<QSpinBox *>(QString("ageSpinBox"))->value());
+    q.bindValue(":etat_civil", this->findChild<QButtonGroup *>(QString("etatCivilGroup"))->checkedId() * (-1) -2 );
+    q.bindValue(":revenu", this->findChild<QComboBox *>(QString("revenuComboBox"))->currentIndex());
+    q.bindValue(":nb_adultes", this->findChild<QSpinBox *>(QString("adultesSpinBox"))->value());
+    q.bindValue(":nb_enfants", this->findChild<QSpinBox *>(QString("enfantsSpinBox"))->value());
+    q.bindValue(":nb_animaux", this->findChild<QSpinBox *>(QString("animauxSpinBox"))->value());
+    q.exec();
+
+    q.exec("SELECT last_insert_rowid();");
+    q.next();
+    int last_index = q.value(0).toInt();
+
+    for (int i = 0; i < 8; i++) {
+        q.prepare("INSERT INTO consommation (id_sonde, type, total, aubonlait) VALUES (?, ?, ?, ?);");
+        QSpinBox * spinBox = this->findChild<QSpinBox *>(QString("slaveSpinBox_%1").arg(i + 1));
+        q.addBindValue(last_index);
+        q.addBindValue(i);
+        q.addBindValue(spinBox->maximum());
+        q.addBindValue(spinBox->value());
+        q.exec();
+    }
+
 }

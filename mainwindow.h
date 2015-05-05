@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+#include "surveywizard.h"
+#include "statswidget.h"
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +21,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QWidget *startWidget;
+    SurveyWizard *surveyWidget;
+    StatsWidget *statsWidget;
+
+private slots:
+    void displaySurvey();
+    void displayStats();
 };
 
 #endif // MAINWINDOW_H

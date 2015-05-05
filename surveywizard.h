@@ -25,6 +25,7 @@ private slots:
     void activateDanone(bool activate);
     void activateYoplait(bool activate);
     void activateLactel(bool activate);
+    void saveSurvey();
 };
 
 #endif // SURVEYWIZARD_H
