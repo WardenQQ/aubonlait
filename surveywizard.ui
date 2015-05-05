@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SurveyWizard</class>
+ <widget class="QWizard" name="SurveyWizard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>509</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wizard</string>
+  </property>
+  <widget class="QWizardPage" name="wizardPage1">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Age</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QRadioButton" name="radioButton_5">
+      <property name="text">
+       <string>Cé&amp;libataire</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_2</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QRadioButton" name="radioButtonSexeHomme">
+      <property name="text">
+       <string>Homme</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="spinBox"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Etat Civil</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QRadioButton" name="radioButtonMarie">
+      <property name="text">
+       <string>Mari&amp;ée</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_2</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QRadioButton" name="radioButtonVeuf">
+      <property name="text">
+       <string>&amp;Veuve</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup_2</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Tranche de revenu</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>0 à 1000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1000 à 2000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2000 à 3000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3000 à 4000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4000 à 5000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5000 à 6000 €</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>plus de 6000 €</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QRadioButton" name="radioButtonSexeFemme">
+      <property name="text">
+       <string>Fe&amp;mme</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Sexe</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizardPage2">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Nombre d'adultes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="spinBox_2"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Nombre d'enfants</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="spinBox_3"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Nombre d'animaux de companie</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="spinBox_4"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizardPage">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="10" column="2" colspan="2">
+     <widget class="QWidget" name="widget_2" native="true"/>
+    </item>
+    <item row="8" column="2">
+     <widget class="QRadioButton" name="lactelJamais">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Jamais</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">lactelGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QRadioButton" name="lactelRarement">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Rarement</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">lactelGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QRadioButton" name="lactelParfois">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Parfois</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">lactelGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>Aubonlait</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QRadioButton" name="aubonlaitSouvent">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Sou&amp;vent</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">aubonlaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QRadioButton" name="danoneRarement">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Rarement</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">danoneGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QRadioButton" name="danoneParfois">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Parfois</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">danoneGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="QRadioButton" name="danoneSouvent">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Sou&amp;vent</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">danoneGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QRadioButton" name="aubonlaitRarement">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Rarement</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">aubonlaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QCheckBox" name="aubonlaitCheck">
+      <property name="text">
+       <string>Aubonlait</string>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="danoneCheck">
+      <property name="text">
+       <string>Danone</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QRadioButton" name="aubonlaitParfois">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Parfois</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">aubonlaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Danone</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QRadioButton" name="danoneJamais">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Ja&amp;mais</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">danoneGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QCheckBox" name="yoplaitCheck">
+      <property name="text">
+       <string>Yoplait</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCheckBox" name="lactelCheck">
+      <property name="text">
+       <string>Lactel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QRadioButton" name="yoplaitJamais">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>&amp;Jamais</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">yoplaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QRadioButton" name="yoplaitRarement">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Rarement</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">yoplaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QRadioButton" name="yoplaitParfois">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Parfois</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">yoplaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Yoplait</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="QRadioButton" name="yoplaitSouvent">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Sou&amp;vent</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">yoplaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Lactel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="5">
+     <widget class="QRadioButton" name="lactelSouvent">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Sou&amp;vent</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">lactelGroup</string>
+      </attribute>
+     </widget>
+    </item>
+    <item row="9" column="1" colspan="3">
+     <widget class="QWidget" name="widget" native="true"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QRadioButton" name="aubonlaitJamais">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>&amp;Jamais</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">aubonlaitGroup</string>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizardPage_2">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>natures</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QSlider" name="master_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>aux fruits avec morceaux</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>mixés/brassés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>yaourts anti-cholestérol</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>aromatisés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>au bifidus nature ou aux fruits</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>yaourts à boire</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>yaourts allégés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSlider" name="master_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QSlider" name="master_8">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSlider" name="master_4">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSlider" name="master_1">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QSlider" name="master_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QSlider" name="master_7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSlider" name="master_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QSpinBox" name="spinBox_5"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QSpinBox" name="spinBox_6"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QSpinBox" name="spinBox_7"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QSpinBox" name="spinBox_8"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QSpinBox" name="spinBox_9"/>
+    </item>
+    <item row="5" column="2">
+     <widget class="QSpinBox" name="spinBox_10"/>
+    </item>
+    <item row="6" column="2">
+     <widget class="QSpinBox" name="spinBox_11"/>
+    </item>
+    <item row="7" column="2">
+     <widget class="QSpinBox" name="spinBox_12"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizardPage_3">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="3" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_23">
+      <property name="text">
+       <string>yaourts à boire</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_27">
+      <property name="text">
+       <string>yaourts allégés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_1">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_24">
+      <property name="text">
+       <string>aux fruits avec morceaux</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_20">
+      <property name="text">
+       <string>natures</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_26">
+      <property name="text">
+       <string>mixés/brassés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="text">
+       <string>yaourts anti-cholestérol</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_22">
+      <property name="text">
+       <string>aromatisés</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_21">
+      <property name="text">
+       <string>au bifidus natur ou aux fruits</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_8">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_1">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_4">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="SlaveSlider" name="slaveSlider_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="maximum">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_6">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_7">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="SlaveSpinBox" name="slaveSpinBox_8">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="suffix">
+       <string>/0</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SlaveSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>slavespinbox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SlaveSlider</class>
+   <extends>QSlider</extends>
+   <header>slaveslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>slaveSlider_1</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_1</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>651</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_3</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>662</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>657</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>133</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_6</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>632</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_7</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>634</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_8</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>650</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSlider_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSpinBox_4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_1</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_1</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>638</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>626</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>56</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_3</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>628</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>634</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_6</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_7</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>625</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slaveSpinBox_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>slaveSlider_8</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>642</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_1</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_1</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_6</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>658</x>
+     <y>56</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>654</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_3</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>657</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_7</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>667</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>611</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_8</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>530</x>
+     <y>98</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>670</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_9</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>591</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>663</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_9</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>653</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>534</x>
+     <y>129</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_10</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>646</x>
+     <y>160</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_10</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_6</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>655</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_11</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_7</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>577</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_7</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_11</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>504</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>645</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_12</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>master_8</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>612</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>master_8</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_12</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>650</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="aubonlaitGroup"/>
+  <buttongroup name="danoneGroup"/>
+  <buttongroup name="yoplaitGroup"/>
+  <buttongroup name="lactelGroup"/>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
+</ui>
