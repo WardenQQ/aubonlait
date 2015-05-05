@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 
 #include "surveywizard.h"
-#include <QtDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

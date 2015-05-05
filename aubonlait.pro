@@ -19,14 +19,18 @@ SOURCES += main.cpp\
     slavespinbox.cpp \
     slaveslider.cpp \
     statswidget.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    piechart.cpp \
+    nightcharts.cpp
 
 HEADERS  += mainwindow.h \
     surveywizard.h \
     slavespinbox.h \
     slaveslider.h \
     statswidget.h \
-    qcustomplot.h
+    qcustomplot.h \
+    piechart.h \
+    nightcharts.h
 
 FORMS    += mainwindow.ui \
     surveywizard.ui \

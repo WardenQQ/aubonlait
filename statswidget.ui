@@ -60,7 +60,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout_4">
     <item row="1" column="0">
-     <widget class="QCustomPlot" name="histogrammeRevenu_3" native="true"/>
+     <widget class="QWidget" name="histogrammeRevenu_3" native="true"/>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label_4">
@@ -85,7 +85,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -121,13 +121,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>260</y>
-     <width>281</width>
-     <height>191</height>
+     <width>311</width>
+     <height>231</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -153,7 +153,7 @@
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QCustomPlot" name="histogrammeRevenu" native="true"/>
+     <widget class="QWidget" name="histogrammeRevenu" native="true"/>
     </item>
    </layout>
   </widget>
@@ -162,7 +162,7 @@
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header location="global">qcustomplot.h</header>
+   <header>qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

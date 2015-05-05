@@ -19,7 +19,6 @@ StatsWidget::~StatsWidget()
 
 void StatsWidget::consommationsParTypes(QCustomPlot *customPlot)
 {
-
     QSqlQuery q;
     q.exec("SELECT avg(aubonlait), avg(total) FROM consommation GROUP BY type;");
     QVector<double> totalData, aubonlaitData;
@@ -99,6 +98,8 @@ void StatsWidget::consommationsParRevenu(QCustomPlot *customPlot)
 
     QSqlQuery q;
     q.exec("SELECT SUM(total) FROM Sonde NATURAL JOIN Consommation GROUP BY revenu;");
+    fprintf(stderr, "coucou");
+
     QVector<double> totalData;
     double max = 5;
     while(q.next()) {
@@ -107,6 +108,8 @@ void StatsWidget::consommationsParRevenu(QCustomPlot *customPlot)
         if (val > max)
             max = val;
     }
+    fprintf(stderr, "coucou");
+
 
     // create empty bar chart objects:
     QCPBars *total = new QCPBars(customPlot->xAxis, customPlot->yAxis);
