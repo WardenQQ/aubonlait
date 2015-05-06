@@ -13,156 +13,179 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>389</x>
-     <y>255</y>
-     <width>331</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Consommation moyenne par revenu</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCustomPlot" name="histogrammeRevenu_2" native="true"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>499</x>
-     <y>9</y>
-     <width>221</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_4">
-    <item row="1" column="0">
-     <widget class="QWidget" name="histogrammeRevenu_3" native="true"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Petits nombres</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>9</y>
-     <width>391</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
-     <widget class="QCustomPlot" name="histogrammeMoyenne" native="true"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Consommation moyenne par type de yaourt</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>260</y>
-     <width>311</width>
-     <height>231</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Pie chart</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QWidget" name="histogrammeRevenu" native="true"/>
-    </item>
-   </layout>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="1" column="0">
+          <widget class="QCustomPlot" name="histogrammeMoyenne" native="true"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Consommation moyenne par type de yaourt</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="nbVieuxLabel">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Âge moyen des consommateurs de yaourts anti-cholestérol : 0 ans</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="nbJeunesLabel">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Nombre d’enfants moyen parmi les foyers consommateurs de yaourts à boire : 0 ans</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="0">
+          <widget class="QCustomPlot" name="histogrammeRevenu" native="true"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Consommation moyenne par revenu</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Pie chart</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="PieChart" name="pieChart" native="true"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <customwidgets>
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
    <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PieChart</class>
+   <extends>QWidget</extends>
+   <header>piechart.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

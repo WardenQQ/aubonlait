@@ -7,12 +7,18 @@
 PieChart::PieChart(QWidget *parent) : QWidget(parent)
 {
     QSqlQuery q;
-    q.exec("SELECT COUNT(*) FROM Sonde NATURAL JOIN (SELECT * FROM Consommation WHERE type = 7 AND total > 0) GROUP BY sexe;");
-    q.next();
-    double female = q.value(0).toDouble();
-    q.next();
-    double male = q.value(0).toDouble();
+    q.exec("SELECT COUNT(*), sexe FROM Sonde NATURAL JOIN (SELECT * FROM Consommation WHERE type = 7 AND total > 0) GROUP BY sexe;");
+    double female = 0, male = 0;
+    while (q.next()) {
+        if (q.value(1).toInt() == 0)
+            female = q.value(0).toDouble();
+        else
+            male = q.value(0).toDouble();
+    }
 
+    if (male + female == 0) {
+        female = 100;
+    }
     percentFemale = (female / (female + male)) * 100;
     percentMale = 100 - percentFemale;
 }

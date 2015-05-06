@@ -17,8 +17,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QPushButton * statButton = this->findChild<QPushButton *>(QString("statButton"));
     connect(statButton, &QPushButton::clicked, this, &MainWindow::displayStats);
-    connect(statButton, &QPushButton::clicked, startWidget, &QWidget::hide);
-
 }
 
 MainWindow::~MainWindow()
@@ -37,7 +35,5 @@ void MainWindow::displaySurvey()
 void MainWindow::displayStats()
 {
     this->statsWidget = new StatsWidget();
-    //connect(statsWidget, &StatsWidget::finished, startWidget, &QWidget::show);
-    this->centralWidget()->layout()->addWidget(this->statsWidget);
-    this->setMinimumSize(this->statsWidget->size());
+    this->statsWidget->showFullScreen();
 }

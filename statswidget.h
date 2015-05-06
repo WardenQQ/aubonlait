@@ -20,7 +20,11 @@ public:
     ~StatsWidget();
     void consommationsParTypes(QCustomPlot *customPlot);
     void consommationsParRevenu(QCustomPlot *customPlot);
+    void consommationAnticholesterol();
+    void consommationABoire();
 
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::StatsWidget *ui;

@@ -9,7 +9,8 @@ StatsWidget::StatsWidget(QWidget *parent) :
 
     consommationsParTypes(this->findChild<QCustomPlot *>(QString("histogrammeMoyenne")));
     consommationsParRevenu(this->findChild<QCustomPlot *>(QString("histogrammeRevenu")));
-
+    consommationAnticholesterol();
+    consommationABoire();
 }
 
 StatsWidget::~StatsWidget()
@@ -98,7 +99,6 @@ void StatsWidget::consommationsParRevenu(QCustomPlot *customPlot)
 
     QSqlQuery q;
     q.exec("SELECT SUM(total) FROM Sonde NATURAL JOIN Consommation GROUP BY revenu;");
-    fprintf(stderr, "coucou");
 
     QVector<double> totalData;
     double max = 5;
@@ -108,8 +108,6 @@ void StatsWidget::consommationsParRevenu(QCustomPlot *customPlot)
         if (val > max)
             max = val;
     }
-    fprintf(stderr, "coucou");
-
 
     // create empty bar chart objects:
     QCPBars *total = new QCPBars(customPlot->xAxis, customPlot->yAxis);
@@ -163,4 +161,33 @@ void StatsWidget::consommationsParRevenu(QCustomPlot *customPlot)
     legendFont.setPointSize(10);
     customPlot->legend->setFont(legendFont);
     customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+}
+
+void StatsWidget::consommationAnticholesterol()
+{
+    QSqlQuery q;
+    q.exec("SElECT AVG(age) FROM Sonde NATURAL JOIN (SELECT * FROM Consommation where type = 5 AND total > 0);");
+
+    double val = 0.0;
+    if (q.next())
+        val = q.value(0).toDouble();
+
+    this->findChild<QLabel *>(QString("nbVieuxLabel"))->setText(QString("Âge moyen des consommateurs de yaourts anti-cholestérol : %0 ans").arg(val));
+}
+
+void StatsWidget::consommationABoire()
+{
+    QSqlQuery q;
+    q.exec("SElECT AVG(nb_enfants) FROM Sonde NATURAL JOIN (SELECT * FROM Consommation where type = 6 AND total > 0);");
+
+    double val = 0.0;
+    if (q.next())
+        val = q.value(0).toDouble();
+
+    this->findChild<QLabel *>(QString("nbJeunesLabel"))->setText(QString("Nombre d’enfants moyen parmi les foyers consommateurs de yaourts à boire : %0 ans").arg(val));
+}
+
+void StatsWidget::on_pushButton_clicked()
+{
+    this->close();
 }
