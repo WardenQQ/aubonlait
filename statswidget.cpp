@@ -172,7 +172,7 @@ void StatsWidget::consommationAnticholesterol()
     if (q.next())
         val = q.value(0).toDouble();
 
-    this->findChild<QLabel *>(QString("nbVieuxLabel"))->setText(QString("Âge moyen des consommateurs de yaourts anti-cholestérol : %0 ans").arg(val));
+    this->findChild<QLabel *>(QString("nbVieuxLabel"))->setText(QString("Âge moyen des consommateurs de yaourts anti-cholestérol : <b>%0 ans</b>").arg(val));
 }
 
 void StatsWidget::consommationABoire()
@@ -184,7 +184,7 @@ void StatsWidget::consommationABoire()
     if (q.next())
         val = q.value(0).toDouble();
 
-    this->findChild<QLabel *>(QString("nbJeunesLabel"))->setText(QString("Nombre d’enfants moyen parmi les foyers consommateurs de yaourts à boire : %0 ans").arg(val));
+    this->findChild<QLabel *>(QString("nbJeunesLabel"))->setText(QString("Nombre d’enfants moyen parmi les foyers consommateurs de yaourts à boire : <b>%0 enfants</b>").arg(val));
 }
 
 void StatsWidget::on_pushButton_clicked()
